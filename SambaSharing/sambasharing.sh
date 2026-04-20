@@ -15,7 +15,7 @@ SMB_CONFIG_FILE="/etc/samba/smb.conf"
 
 #check if smb.conf file exists
 	if [ ! -e $SMB_CONFIG_FILE ]; then
-		echo "samba confiuration file doesn't exists!";
+		echo "samba configuration file doesn't exists!";
 		echo "aborting";
 		exit;
 	fi
