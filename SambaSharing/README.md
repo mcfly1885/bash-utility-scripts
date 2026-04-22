@@ -19,7 +19,7 @@ Once the paramter has been given, the script shows the resume of user entry. If 
 
 1. Make it executable   `sudo chmod +x sambasharing.sh` 
 2. Execute the script   `sudo ./sambasharing.sh`
-3. Restart Samba        `sudo systemctl restart smbd`
+3. After ran the script, and added lines in smb.conf, restart Samba `sudo systemctl restart smbd`
 
 ## Why this script? 💡
 Because it can makes this operation faster then hand writing each parameter in smb.conf file.
