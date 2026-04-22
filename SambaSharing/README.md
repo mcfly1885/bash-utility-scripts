@@ -14,7 +14,7 @@ Once the paramter has been given, the script shows the resume of user entry. If 
 
 **Make sure to restart smbd service for the changes to take effect.**
 
-## How to use
+## How to use it 🚀
 **To use this script is needed that Samba has been installed.**
 
 1. Make it executable   `sudo chmod +x sambasharing.sh` 
