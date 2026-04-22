@@ -14,6 +14,13 @@ Once the paramter has been given, the script shows the resume of user entry. If 
 
 **Make sure to restart smbd service for the changes to take effect.**
 
+## How to use
+**To use this script is needed that Samba has been installed.**
+
+1. Make it executable   `sudo chmod +x sambasharing.sh` 
+2. Execute the script   `sudo ./sambasharing.sh`
+3. Restart Samba        `sudo systemctl restart smbd`
+
 ## Why this script? 💡
 Because it can makes this operation faster then hand writing each parameter in smb.conf file.
 
