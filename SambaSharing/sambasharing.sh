@@ -8,7 +8,7 @@ echo -e "\n"
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then 
 	echo "ha ha ha, you didn't say the magic word..."
 	echo "Access Denied"
-	exit;
+	exit 1;
 fi
 
 SMB_CONFIG_FILE="/etc/samba/smb.conf"
@@ -17,7 +17,7 @@ SMB_CONFIG_FILE="/etc/samba/smb.conf"
 	if [ ! -e $SMB_CONFIG_FILE ]; then
 		echo "samba configuration file doesn't exists!";
 		echo "aborting";
-		exit;
+		exit 1;
 	fi
 
 echo -e "Samba Share Configuration Wizard\n********************************"
