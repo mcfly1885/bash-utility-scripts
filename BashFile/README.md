@@ -16,4 +16,4 @@ The script accepts multiple file name as arguments and creates a new file(s) rea
 2. Execute the script   `./bashfile.sh arg1 arg2...`
 
 ## Why this script? 💡
-Because it can makes this operation faster then create a (or multiple) new bash file(s).
+Because it can makes this operation faster then manually create a (or multiple) new bash file(s).
