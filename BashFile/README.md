@@ -4,11 +4,13 @@ The script that creates a new empty bash file with hashbang e makes it executabl
 
 ## How it works ⚙️
 
-The scripts requires to user the following parameters:
+The script requires to user the following parameters:
 
-- name of file(s)
+- name of file
 
-The script accepts multiple file name as arguments and creates a new file(s) ready to be edit and writes in the hashbang e makes it executable only by the owner.
+The script accepts multiple file name as arguments and creates a new file ready to be edit and writes in the hashbang e makes it executable only by the owner.
+
+It can create as many files as many given names. 
 
 ## How to use it 🚀
 
@@ -16,4 +18,4 @@ The script accepts multiple file name as arguments and creates a new file(s) rea
 2. Execute the script   `./bashfile.sh arg1 arg2...`
 
 ## Why this script? 💡
-Because it can makes this operation faster then manually create a (or multiple) new bash file(s).
+Because it can makes this operation faster then manually create single or multiple new bash files.
