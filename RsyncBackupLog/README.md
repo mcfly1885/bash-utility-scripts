@@ -28,11 +28,11 @@ This script is designed to work with **cron**. If you want to set a crontab, rem
 1. Make it executable: `chmod +x rsyncbakuplog.sh` 
 2. Execute the script like in the following example:
 
-`rsyncbakuplog.sh -s path/to/yourfile.txt -d path/to/backupdir -l path/to/logfile.txt`
+`./rsyncbakuplog.sh -s path/to/yourfile.txt -d path/to/backupdir -l path/to/logfile.txt`
 
 if you want to enable quiet mode
 
-`rsyncbakuplog.sh -s path/to/yourfile.txt -d path/to/backupdir -q`
+`./rsyncbakuplog.sh -s path/to/yourfile.txt -d path/to/backupdir -q`
 
 ## Be carful! ⚠️
 **This script work with files and directores. Make sure that you know what are you doing**.
