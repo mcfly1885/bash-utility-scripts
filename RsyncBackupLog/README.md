@@ -22,7 +22,7 @@ The log messages are of three levels:
 - ERROR --> error message that reports an falied operation and script exits on error status.
 
 ### Hint 💡
-This script is design to work with **cron**. If you want to set a crontab, remember to use absolute paths.
+This script is designed to work with **cron**. If you want to set a crontab, remember to use absolute paths.
 
 ## How to use it 🚀
 1. Make it executable: `chmod +x rsyncbakuplog.sh` 
