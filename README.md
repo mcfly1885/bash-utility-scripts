@@ -6,3 +6,4 @@ A collection of bash utility scrips.
 
 ## System
 1. [Bash File Creator](BashFile/README.md) The script that creates n bash file(s) ready to be edit.
+2. [Rsync Backup with Log](RsyncBackupLog/README.md) The script that backups file or directory with rsync and writes a log file.

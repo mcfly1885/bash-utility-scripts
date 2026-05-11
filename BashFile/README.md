@@ -10,7 +10,7 @@ The script requires to user the following parameters:
 
 The script accepts multiple file name as arguments and creates a new file ready to be edit and writes in the hashbang e makes it executable only by the owner.
 
-It can create as many files as many given names. 
+It can creates as many files as many given names. 
 
 ## How to use it 🚀
 
