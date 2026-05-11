@@ -96,6 +96,6 @@ if [ -e $SOURCE ]; then
 	fi
 
 else
-	date +"[*] %d/%m/%Y %T [ER	ROR] Source file or directory $(realpath $SOURCE) does not exist " >> $LOG_PATH
+	date +"[*] %d/%m/%Y %T [ERROR] Source file or directory $(realpath $SOURCE) does not exist " >> $LOG_PATH
 	exit 1
 fi
