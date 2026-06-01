@@ -37,7 +37,7 @@ flowchart TD
          -->argsNumbber{input arguments = 0 ?}:::condition
             --YES-->error[Write an error message <br>on stdout]:::process-->exit[Exit on <br>error status]:::error-->stop
             
-        argsNumbber --NO-->forcycle{Arguments > 0 ?}:::condition
+        argsNumbber --NO-->forcycle{There are arguments in $@?}:::condition
         forcycle--NO-->stop((END))
 
         argExists--NO-->createFile[Create a new File <br>from given argument]-->hashbang[Write in it the hasbang]-->makexec[make it executable <br>only by owner]-->infomsg[Write success message on stdout]-->forcycle
