@@ -87,14 +87,16 @@ fi
 #---RUN-backup--------------------------------------------------------------------------------------------------------------------
 #if source extists
 if [ -e $SOURCE ]; then
-	if [ -f $SOURCE ]; then
+	if [ -h $SOURCE ]; then
+		rsync -L $SOURCE --mkpath $DESTINATION""$SOURCE
+		date +"[*] %d/%m/%Y %T [INFO] Backup of data at symlink-->$(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH		
+	elif [ -f $SOURCE ]; then
 		rsync $SOURCE $DESTINATION	
 		date +"[*] %d/%m/%Y %T [INFO] Backup of file $(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH
 	elif [ -d $SOURCE ]; then
 		rsync -r $SOURCE --mkpath $DESTINATION""$SOURCE
 		date +"[*] %d/%m/%Y %T [INFO] Backup of directory $(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH
 	fi
-
 else
 	date +"[*] %d/%m/%Y %T [ERROR] Source file or directory $(realpath $SOURCE) does not exist " >> $LOG_PATH
 	exit 1
