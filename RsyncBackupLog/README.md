@@ -2,7 +2,7 @@
 The script that backups file or directory with rsync and writes a log file.
 
 ## How it works ⚙️
-Here you can find the [Flowchart](flowchart.md)
+
 ### Requirements
 Make sure that on your system is installed: 
  - rsync 
