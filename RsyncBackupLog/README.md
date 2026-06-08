@@ -2,26 +2,40 @@
 The script that backups file or directory with rsync and writes a log file.
 
 ## How it works ⚙️
-Here you can find the [Flowchart](flowchart.md)
-### Requirements
+
+The script executes a backup of a file or directory from given SOURCE path to given DESTINATION path. Each operation (info, warning or error) is written in a log txt file. If quiet mode is enabled no log file will be use.
+
+## Requirements 🛠️
 Make sure that on your system is installed: 
- - rsync 
- - realpath
+```
+ rsync 
+ realpath
+ ```
 
-### Parameters
-- -s the source path of file or directory to backup
-- -d the destination path where to save the backup, it must be a directory
-- -l the log file path, it must be a txt file. If the file doesn't extist on the given path a new one is created
-- -q enable quiet mode, no log file will be used
+## Parameters 📋
 
-### Log
-The log messages are of three levels:
+|Parameter|Description|
+|---------|-----------|
+|-s| the source path of file or directory to backup. If the source path point to a symLink, rsync will backup the actual file by following the symlink path.
+|-d| the destination path where to save the backup, it must be a directory|
+|-l|the log file path, it must be a txt file. If the file doesn't exist on the given path a new one is created|
+|-q| enable quiet mode, no log file will be use|
 
-- INFO --> message that reports an operation executed with success
-- WARNING --> message that reports a failed operation but the script can continue
-- ERROR --> error message that reports an falied operation and script exits on error status.
 
-### Hint 💡
+
+## Log 📄
+The log messages include timestamp and are of three categories:
+
+|Category| Description |
+|----------|-------------|
+|INFO| message that reports an operation executed with success|
+|WARNING| message that reports a failed operation but the script can continue|
+|ERROR| message that reports a failed operation and script exits on error status.
+
+
+
+
+## Hint 💡
 This script is designed to work with **cron**. If you want to set a crontab, remember to use absolute paths.
 
 ## How to use it 🚀
@@ -35,7 +49,7 @@ if you want to enable quiet mode
 `./rsyncbakuplog.sh -s path/to/yourfile.txt -d path/to/backupdir -q`
 
 ## Be carful! ⚠️
-**This script work with files and directores. Make sure that you know what are you doing**.
+**This script work with files and directories. Make sure that you know what are you doing**.
 
 ## Flowchart
 ```mermaid
