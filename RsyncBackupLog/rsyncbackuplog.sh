@@ -56,7 +56,7 @@ if [ "$QUIET" != "true" ]; then #if quiet mode is not set
 			fi
 		else #if nothing exists on given path create a log file and add a line with warning message
 			touch $LOG_PATH
-			date +"[*] %d/%m/%Y %T [WARNING] Log file not found, created new one " >> $LOG_PATH
+			date +"[*] %Y-%m-%d %T [WARNING] Log file not found, created new one " >> $LOG_PATH
 		fi
 	fi
 fi
@@ -64,22 +64,22 @@ fi
 
 #if source path is not defined
 if [ -z "$SOURCE" ]; then
-	date +"[*] %d/%m/%Y %T [ERROR] Source file or directory path is not defined " >> $LOG_PATH
+	date +"[*] %Y-%m-%d %T [ERROR] Source file or directory path is not defined " >> $LOG_PATH
 	exit 1
 fi
 
 #---DESTINATION--check--------------------------------------------------------
 #if destination path is not defined
 if [ -z "$DESTINATION" ]; then
-	date +"[*] %d/%m/%Y %T [ERROR] Destionation file or directory path is not defined " >> $LOG_PATH
+	date +"[*] %Y-%m-%d %T [ERROR] Destionation file or directory path is not defined " >> $LOG_PATH
 	exit 1
 else
 	#if destination does not exist
 	if [ ! -e $DESTINATION ]; then
-		date +"[*] %d/%m/%Y %T [ERROR] Destionation directory $(realpath $DESTINATION) does not exist " >> $LOG_PATH
+		date +"[*] %Y-%m-%d %T [ERROR] Destionation directory $(realpath $DESTINATION) does not exist " >> $LOG_PATH
 		exit 1
 	elif [ ! -d $DESTINATION ]; then #if destination is not a directory
-		date +"[*] %d/%m/%Y %T [ERROR] Destionation directory $(realpath $DESTINATION) is not a directory " >> $LOG_PATH
+		date +"[*] %Y-%m-%d %T [ERROR] Destionation directory $(realpath $DESTINATION) is not a directory " >> $LOG_PATH
 		exit 1
 	fi
 fi
@@ -89,15 +89,15 @@ fi
 if [ -e $SOURCE ]; then
 	if [ -h $SOURCE ]; then
 		rsync -L $SOURCE --mkpath $DESTINATION""$SOURCE
-		date +"[*] %d/%m/%Y %T [INFO] Backup of data at symlink-->$(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH		
+		date +"[*] %Y-%m-%d %T [INFO] Backup of data at symlink-->$(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH		
 	elif [ -f $SOURCE ]; then
 		rsync $SOURCE $DESTINATION	
-		date +"[*] %d/%m/%Y %T [INFO] Backup of file $(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH
+		date +"[*] %Y-%m-%d %T [INFO] Backup of file $(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH
 	elif [ -d $SOURCE ]; then
 		rsync -r $SOURCE --mkpath $DESTINATION""$SOURCE
-		date +"[*] %d/%m/%Y %T [INFO] Backup of directory $(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH
+		date +"[*] %Y-%m-%d %T [INFO] Backup of directory $(realpath $SOURCE) on $(realpath $DESTINATION) executed" >> $LOG_PATH
 	fi
 else
-	date +"[*] %d/%m/%Y %T [ERROR] Source file or directory $(realpath $SOURCE) does not exist " >> $LOG_PATH
+	date +"[*] %Y-%m-%d %T [ERROR] Source file or directory $(realpath $SOURCE) does not exist " >> $LOG_PATH
 	exit 1
 fi
