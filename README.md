@@ -1,5 +1,10 @@
 # Bash Utility Scripts
-A collection of bash utility scrips
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" width="150" />
+<br><b>A collection of bash utility scripts</b>
+</p>
+
+
 
 ## Network
 1. [Samba Sharing Wizard](SambaSharing/README.md) A configuration wizard for Samba.
