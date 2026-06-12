@@ -1,6 +1,6 @@
 # Bash Utility Scripts
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" width="150" />
+  <img src="img/bash-utility-script-cover.webp"/>
 <br><b>A collection of bash utility scripts</b>
 </p>
 
