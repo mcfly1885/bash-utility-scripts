@@ -1,4 +1,4 @@
-# USB Device Disconnector 🔌
+# USB Device Disconnection 🔌
 The script that safely disconnect a USB drive.
 
 ## How it works ⚙️
