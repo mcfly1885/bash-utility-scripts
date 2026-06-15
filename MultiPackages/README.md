@@ -6,14 +6,14 @@ The scritp will install packages from a text file that contain the list of packa
 
 First, the script check if:
 - the user has sudo privileges
-- the user give a parameter
-- the file given as parameter exists on given path
+- the user gives a path as prameter
+- the file exists on given path
 - the file on given path is a text file
 
 If the user input pass the checks the script will 
 - update the repositories
 - get the txt file
-- shows its content
+- show its content
 - asks for confirmation to user.
 
 If user confirm, the script will install the given list of packages.
