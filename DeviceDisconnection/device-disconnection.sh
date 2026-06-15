@@ -1,6 +1,6 @@
 #!/bin/bash
 usage(){
-    echo "device-disconnect -m sdX"
+    echo "device-disconnect -d sdX"
 }
 
 while getopts "d:" opt; do
