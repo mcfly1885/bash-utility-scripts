@@ -45,7 +45,7 @@ chmod +x openvault.sh
 2. Execute the script like in the following example: 
 
 ```bash
-./openvault.sh`
+./openvault.sh
 ```
 
 ## Be carful! ⚠️
