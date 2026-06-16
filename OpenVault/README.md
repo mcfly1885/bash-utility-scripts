@@ -40,7 +40,7 @@ If you wanto customize your environment variables, remember to update the code o
 ## How to use it 🚀
 1. Make it executable: 
 ```bash 
-chmod +x openvault.sh` 
+chmod +x openvault.sh
 ```
 2. Execute the script like in the following example: 
 
