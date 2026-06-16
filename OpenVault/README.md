@@ -23,7 +23,7 @@ Make sure that on your system is installed:
  gocryptfs
  ```
 Set environment variables in your .bashrc file
-```
+```bash
 export vault=path/to/your/vault
 export mntpoint=path/to/your/mntpoint
 ```
@@ -38,9 +38,15 @@ To make more easly open encrypted directory with only one command.
 If you wanto customize your environment variables, remember to update the code of the script with the new variables name.
 
 ## How to use it 🚀
-1. Make it executable: `chmod +x openvault.sh` 
-2. Execute the script like in the following example: `./openvault.sh`
+1. Make it executable: 
+```bash 
+chmod +x openvault.sh` 
+```
+2. Execute the script like in the following example: 
 
+```bash
+./openvault.sh`
+```
 
 ## Be carful! ⚠️
 **This script works with encrypted directories. Make sure that you always have a backup of your data and that you know what are you doing.**
