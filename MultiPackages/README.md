@@ -2,11 +2,11 @@
 The script that install the packages from a text file.
 
 ## How it works ⚙️
-The scritp will install packages from a text file that contain the list of packages.
+The script will install packages from a text file that contain the list of packages.
 
 First, the script check if:
 - the user has sudo privileges
-- the user gives a path as prameter
+- the user gives a path as parameter
 - the file exists on given path
 - the file on given path is a text file
 

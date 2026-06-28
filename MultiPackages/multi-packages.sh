@@ -10,23 +10,29 @@ fi
 #check if there is a input parameter
 if [[ $# -eq 0 ]]; then
 	echo "Error: no argument given!"
+    echo "usage: multi-packages <file.txt>"
 	exit 1
+elif [[ $# -gt 1 ]]; then #limit to 1 parameter
+    echo "Error: too many parameters given"
+    echo "usage: multi-packages <file.txt>"
+    exit 1
 fi
 
-#check if file exists
-if [[ -e $1 ]]; then 
+#check if file exists and is a regula file
+if [[ -f $1 ]]; then 
     file=$( file --mime-type $1 | awk '{print $2}' ) #get the file mime type
+    # check if file is not a text file
+    if [[ $file != "text/plain" ]]; then 
+        echo "Error: file path is not a text file" 
+        exit 1	
+    fi
 else
-    echo "The given file does not exist!"
+    echo "The given file does not exist or is not a regular file!"
     echo "aborting"
     exit 1
 fi
 
-# check if file is not a text file
-if [[ $file != "text/plain" ]]; then 
-	echo "Error: file path is not a text file" 
-	exit 1	
-fi
+
 
 echo -e "\n **Update reposisoties**\n"
 sudo apt update
