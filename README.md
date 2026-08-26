@@ -15,3 +15,6 @@
 3. [Open Vault](OpenVault/) open an encrypted directory with gocryptfs
 4. [Rsync Backup with Log](RsyncBackupLog/) Backups file or directory with rsync and writes a log file.
 5. [USB Device Disconnection](DeviceDisconnection/) Safely disconnect a USB drive.
+
+## i3wm 
+1. [Random Wallpaper](RandomWallpaper/) The script that sets a random wallpaper image with feh
