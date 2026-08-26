@@ -21,7 +21,7 @@ This script is designed to set random wallpaper images on system login **to use 
 1. Prepare a directory with your images and rename them with a 
 number (1.png, 2.png,...)
 1. Set in script the path to your images directory and the value of max variable, related to the number of images in the directory
-1. add to your **i3wm config file** the line (where "/path/to/" is an path placeholder example to the script file)
+1. add to your **i3wm config file** the line (where "/path/to/" is a placeholder example path to the script file)
 ```
 exec_always --no-startup-id /path/to/randomwallpaper.sh
 ```
