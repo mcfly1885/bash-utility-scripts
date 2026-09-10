@@ -9,14 +9,14 @@ if [[ $# -eq 0 ]]; then
 	exit 1
 fi
 
-for args in $@; do
+for args in "$@"; do
 
-	if [ -e $args ]; then
+	if [ -e "$args" ]; then
 		echo "File $args already exists!" >&2
 	else
-		touch $args
-		echo $HASHBANG > $args
-		chmod 700 $args
+		touch "$args"
+		echo $HASHBANG > "$args"
+		chmod 700 "$args"
 		echo "Bash file $args created"
 	fi
 done
