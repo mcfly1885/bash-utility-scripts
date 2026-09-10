@@ -16,11 +16,7 @@ while getopts "d:" opt; do
         *)
             usage
 			exit 1
-            ;;
-        :)
-			echo "Flag -$OPTARG require an argument."
-			exit 1
-			;;       
+            ;; 
     esac
 done
 
