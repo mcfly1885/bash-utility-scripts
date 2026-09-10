@@ -55,7 +55,7 @@ lsblk | grep "$DEVICE"
 echo "----------------------------------------------------"
 #ask confirmation
 while true; do
-    read -p "Are you sure you want to disconnect "$MOUNTPOINT"? (y/n) >> " yn
+    read -r -p "Are you sure you want to disconnect $MOUNTPOINT? (y/n) >> " yn
      case $yn in
         y|Y) 
             break
