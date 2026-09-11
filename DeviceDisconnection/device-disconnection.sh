@@ -16,11 +16,7 @@ while getopts "d:" opt; do
         *)
             usage
 			exit 1
-            ;;
-        :)
-			echo "Flag -$OPTARG require an argument."
-			exit 1
-			;;       
+            ;; 
     esac
 done
 
@@ -38,7 +34,7 @@ if [[ ! -e $MOUNTPOINT ]]; then
     exit 1    
 fi
 #check if the given device is not a usb
-devtype=$(lsblk -ndo tran $MOUNTPOINT)
+devtype=$(lsblk -ndo tran "$MOUNTPOINT")
 if [[ $devtype != "usb" ]]; then #check if the given device is not usb type.
     echo "Device type mismatch ($devtype)"
     echo "aborting"
@@ -50,12 +46,12 @@ if [[ ! -b $MOUNTPOINT ]]; then #check if is a block special file
     exit 1    
 fi
 
-echo -e "Device Selected:\n$(lsblk -do name,model,tran | grep $DEVICE)"
-lsblk | grep $DEVICE
+echo -e "Device Selected:\n$(lsblk -do name,model,tran | grep "$DEVICE")"
+lsblk | grep "$DEVICE"
 echo "----------------------------------------------------"
 #ask confirmation
 while true; do
-    read -p "Are you sure you want to disconnect $MOUNTPOINT? (y/n) >> " yn
+    read -r -p "Are you sure you want to disconnect $MOUNTPOINT? (y/n) >> " yn
      case $yn in
         y|Y) 
             break
@@ -69,10 +65,10 @@ while true; do
     esac
 done
 
- for montpoint in $MOUNTPOINT*; do
+ for montpoint in "$MOUNTPOINT"*; do
     udisksctl unmount -b "$montpoint" 2>/dev/null
  done
-    udisksctl power-off -b $MOUNTPOINT
+    udisksctl power-off -b "$MOUNTPOINT"
 
 
 echo "Device can now be safely removed"
