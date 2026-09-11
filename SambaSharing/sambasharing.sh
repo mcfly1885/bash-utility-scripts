@@ -24,10 +24,10 @@ echo -e "Samba Share Configuration Wizard\n********************************"
 
 #get the parameters
 
-read -p "Enter Sharing Name: " sharingName
-read -p "Enter Sharing Path: " sharingPath
-read -p "Set permission (000 - 777):" sharingMask
-read -p "Comment (leave blank if not): " sharingComment
+read -r -p "Enter Sharing Name: " sharingName
+read -r -p "Enter Sharing Path: " sharingPath
+read -r -p "Set permission (000 - 777):" sharingMask
+read -r -p "Comment (leave blank if not): " sharingComment
 
 sharingGuest=no
 sharingBrowsable=yes
@@ -48,7 +48,7 @@ echo -e "comment = $sharingComment"
 
 while true; do
 	printf "\n\n"
-	read -p "Continue? y/n " yn
+	read -r -p "Continue? y/n " yn
 	case $yn in
 		[Yy]* )
 	printf "\n" >> $SMB_CONFIG_FILE
