@@ -18,12 +18,12 @@ fi
 
 echo "Opening Vault..."
 
-gocryptfs $vault $mntpoint
+gocryptfs "$vault" "$mntpoint"
 
 if [ $? -eq 0 ]; then
 	echo "Welcome to your secrets..."
 	sleep 1
-	cd $MOUNTPOINT
+	cd "$MOUNTPOINT" || exit 1
 	exec bash
 	exit 0
 fi
