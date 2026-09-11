@@ -19,8 +19,8 @@ elif [[ $# -gt 1 ]]; then #limit to 1 parameter
 fi
 
 #check if file exists and is a regula file
-if [[ -f $1 ]]; then 
-    file=$( file --mime-type $1 | awk '{print $2}' ) #get the file mime type
+if [[ -f "$1" ]]; then 
+    file=$( file --mime-type "$1" | awk '{print $2}' ) #get the file mime type
     # check if file is not a text file
     if [[ $file != "text/plain" ]]; then 
         echo "Error: file path is not a text file" 
@@ -39,16 +39,16 @@ sudo apt update
 
 echo -e "\n Packages list\n"
 
-cat $1
+cat "$1"
 
 echo -e "\n"
 #ask confirmation
 while true; do
-    read -p "Are you sure you want to install this packages? (y/n) >> " yn
+    read -r -p "Are you sure you want to install this packages? (y/n) >> " yn
      case $yn in
         y|Y) 
             echo -e "\n**Install packages**\n"
-            sudo  xargs -a $1 apt install 
+            sudo  xargs -a "$1" apt install 
             break
             ;;
         n|N) 
