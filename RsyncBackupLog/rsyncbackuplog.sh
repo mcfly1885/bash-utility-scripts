@@ -1,7 +1,6 @@
 #!/bin/bash
  usage(){
     echo "Usage: -s [source path file or directory] -d [destination path] -l [log file path] -q quite, no log file will be use"
-	exit 1
  }
 QUIET="false"
 while getopts "s:d:l:q" opt; do
